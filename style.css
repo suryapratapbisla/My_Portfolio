@@ -497,6 +497,11 @@ html,body{
     font-size: 1.8em;
 }
 
+#icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
 #icons i {
     margin-right: 5px;
 }

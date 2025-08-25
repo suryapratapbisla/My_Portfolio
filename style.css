@@ -15,7 +15,7 @@ html,body{
     overflow: hidden;
 }
 
-#main-raper {
+#main-wrapper {
     min-height: 100vh;
     position: relative;
 }
@@ -39,7 +39,7 @@ html,body{
     filter: blur(3px);
 }
 
-#main-raper canvas {
+#main-wrapper canvas {
     height: 100vh;
     width: 100vw;
 

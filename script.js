@@ -3,20 +3,20 @@ function loco() {
 
 
 const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main-raper"),
+  el: document.querySelector("#main-wrapper"),
   smooth: true
 });
 locoScroll.on("scroll", ScrollTrigger.update);
 
 
-ScrollTrigger.scrollerProxy("#main-raper", {
+ScrollTrigger.scrollerProxy("#main-wrapper", {
   scrollTop(value) {
     return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
   }, 
   getBoundingClientRect() {
     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
   },
-  pinType: document.querySelector("#main-raper").style.transform ? "transform" : "fixed"
+  pinType: document.querySelector("#main-wrapper").style.transform ? "transform" : "fixed"
 });
 
 
@@ -682,7 +682,7 @@ gsap.to(imageSeq, {
     trigger: `#canvas-div canvas`,
     start: `top top`,
     end: `550% top`,
-    scroller: `#main-raper`,
+    scroller: `#main-wrapper`,
   },
   onUpdate: render,
 });
@@ -718,7 +718,7 @@ ScrollTrigger.create({
   trigger: "#canvas-div canvas",
   pin: true,
   // markers: true,
-  scroller: `#main-raper`,
+  scroller: `#main-wrapper`,
   start: `top top`,
   end: '550% top'
 });
@@ -729,7 +729,7 @@ canvas()
 gsap.to("#page1",{
   scrollTrigger:{
     trigger: "#page1",
-    scroller: "#main-raper",
+    scroller: "#main-wrapper",
     start: "top top",
     end: "30% top",
     // markers: true,
@@ -750,7 +750,7 @@ gsap.from("#page-1-text", {
 var page2_tl = gsap.timeline({
   scrollTrigger:{
     trigger: "#page2",
-    scroller: "#main-raper",
+    scroller: "#main-wrapper",
     start: "top top",
     end: "50% -5%",
     // markers: true,
@@ -787,7 +787,7 @@ spans.forEach(span => {
   ease: "power2.out",
   scrollTrigger: {
     trigger: span,
-    scroller: "#main-raper",
+    scroller: "#main-wrapper",
     start: "top 90%",
     end: "30% 80%",
     // markers: true,
@@ -801,7 +801,7 @@ spans.forEach(span => {
 var page4_tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#page4",
-    scroller: "#main-raper",
+    scroller: "#main-wrapper",
     start: "-10% top",
     end: "60% top",
     // markers: true,
